@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Lanjutan - Portal Mahasiswa</title>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <h1>Portal Mahasiswa</h1>
+    <p>Praktikum 2 - HTML Lanjutan</p>
+</header>
+
+<!-- ================= NAVIGASI ================= -->
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="#data">Data</a>
+    <a href="#registrasi">Registrasi</a>
+    <a href="#media">Multimedia</a>
+</nav>
+<hr>
+
+<main>
+
+    <!-- ================= TABEL ================= -->
+    <section id="data">
+        <h2>1. Tabel Data Mahasiswa</h2>
+        <table border="1" cellpadding="6">
+            <tr>
+                <th>NIM</th><th>Nama</th><th>Program Studi</th>
+            </tr>
+            <tr><td>31241001</td><td>Andi</td><td>Teknik Informatika</td></tr>
+            <tr><td>31241002</td><td>Budi</td><td>Teknik Informatika</td></tr>
+            <tr><td>31241003</td><td>Citra</td><td>Sistem Informasi</td></tr>
+            <tr><td>312510500</td><td>Syafri Prayogo</td><td>Teknik Informatika</td></tr>
+        </table>
+
+        <h3>Tabel Nilai (thead, tbody, tfoot)</h3>
+        <table border="1" cellpadding="6">
+            <caption>Nilai Praktikum</caption>
+            <thead>
+                <tr><th>No</th><th>Nama</th><th>Nilai</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Andi</td><td>85</td></tr>
+                <tr><td>2</td><td>Budi</td><td>90</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="2">Rata-rata</td><td>87.5</td></tr>
+            </tfoot>
+        </table>
+    </section>
+    <hr>
+
+    <!-- ================= FORM REGISTRASI ================= -->
+    <section id="registrasi">
+        <h2>2. Form Registrasi Mahasiswa</h2>
+        <form>
+            <label for="nama">Nama Lengkap</label><br>
+            <input type="text" id="nama" name="nama" required minlength="3"><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="tanggal">Tanggal Lahir</label><br>
+            <input type="date" id="tanggal" name="tanggal"><br><br>
+
+            <label for="umur">Umur</label><br>
+            <input type="number" id="umur" name="umur" min="17" max="60" required><br><br>
+
+            <!-- Radio button: pilih salah satu -->
+            <h3>Jenis Kelamin</h3>
+            <input type="radio" id="laki" name="jk" value="L">
+            <label for="laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="jk" value="P">
+            <label for="perempuan">Perempuan</label>
+
+            <!-- Checkbox: boleh lebih dari satu -->
+            <h3>Keahlian</h3>
+            <input type="checkbox" id="html" name="skill" value="HTML">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="skill" value="CSS">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="skill" value="JavaScript">
+            <label for="js">JavaScript</label>
+
+            <!-- Select & Textarea -->
+            <h3>Program Studi &amp; Alamat</h3>
+            <label for="prodi">Program Studi</label>
+            <select id="prodi" name="prodi" required>
+                <option value="">-- Pilih Prodi --</option>
+                <option value="ti">Teknik Informatika</option>
+                <option value="si">Sistem Informasi</option>
+            </select>
+            <br><br>
+            <label for="alamat">Alamat</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="40"></textarea>
+            <br><br>
+
+            <button type="submit">Daftar</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+    <hr>
+
+    <!-- ================= MULTIMEDIA ================= -->
+    <section id="media">
+        <h2>3. Multimedia</h2>
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="media/audio.mp3" type="audio/mpeg">
+            Browser tidak mendukung audio.
+        </audio>
+
+        <h3>Video</h3>
+        <video controls width="480">
+            <source src="media/video.mp4" type="video/mp4">
+            Browser tidak mendukung video.
+        </video>
+    </section>
+
+    <!-- ================= ASIDE ================= -->
+    <aside>
+        <h3>Informasi Tambahan</h3>
+        <p>Halaman ini menerapkan semantic HTML: header, nav, main, section,
+        article, aside, dan footer.</p>
+    </aside>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <hr>
+    <p>&copy; 2026 Teknik Informatika - Universitas Pelita Bangsa</p>
+</footer>
+
+</body>
+</html>
